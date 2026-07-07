@@ -2,8 +2,7 @@
 
 Portafolio construido con HTML, CSS y JS.
 
-**Objetivo**Crear un portafolio basado en una plantilla de Bootstrap o Tailwind CSS, documentar su uso en GitHub y publicarlo en GitHub Pages.  
----
+**Objetivo** Crear un portafolio basado en una plantilla de Bootstrap o Tailwind CSS, documentar su uso en GitHub y publicarlo en GitHub Pages.  
 
 **Actividad 4 - Programación Web**
 
