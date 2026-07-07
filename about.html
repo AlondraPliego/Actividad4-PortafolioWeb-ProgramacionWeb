@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        :root {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .playfair {
+            font-family: "Playfair Display", serif;
+        }
+
+        .bg-skew:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            transform: skewY(-5deg);
+            transform-origin: top left;
+            z-index: -1;
+            background-color: #ececec;
+            min-height: 650px;
+            background-image: url("./team.jpg");
+            background-size: cover;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+
+<body class="bg-skew min-h-screen flex flex-col justify-between">
+    <header class="p-4 pt-8">
+        <div class="w-full max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between w-full items-start md:items-center gap-4">
+                <a class="playfair font-bold text-2xl" href="index.html">Alondra Pliego</a>
+                <nav class="flex items-center gap-8 text-sm">
+                    <a href="index.html" class="hover:underline">Inicio</a>
+                    <a href="proyectos.html" class="hover:underline">Proyectos</a>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="px-4 py-24">
+        <div class="w-full max-w-5xl mx-auto">
+            <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-4">
+
+                    <h2 class="playfair font-bold text-4xl">
+                        ¿Quién soy yo?
+                    </h2>
+                    <p class="text-md text-gray-700">
+                        Soy Alondra, diseñadora y desarrolladora freelance apasionada por crear experiencias digitales que combinan
+                        funcionalidad y estética. Me muevo cómodamente entre el diseño de sitios web, el modelado 3D, la creación de
+                        videojuegos y el análisis de datos, siempre buscando que cada proyecto tenga una identidad propia y no una
+                        solución genérica.<br><br>
+                        Un pequeño secreto es que en realidad tengo un gusto particular por el diseño visual: la colorimetría, la tipografía y los pequeños detalles que
+                        hacen que una interfaz se sienta cuidada en vez de solo funcional. Para mí, un buen proyecto no es solo el que
+                        funciona bien, sino el que se ve y se siente bien desde el primer vistazo. Fuera del código y el diseño, también
+                        hablo cuatro idiomas a nivel C2 (inglés, alemán, chino y portugués), lo que me permite trabajar sin fricciones
+                        con clientes de distintas partes del mundo.
+                    </p>
+                </div>
+                
+                <div x-data="{ tab: 'tab1' }" class="mt-12 lg:mt-24 w-full">
+                    <!-- Onglets -->
+                    <div class="flex border-b border-gray-200 mb-4">
+                        <button :class="tab === 'tab1' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-500'"
+                            @click="tab = 'tab1'" class="cursor-pointer py-2 focus:outline-none">
+                            Objetivos
+                        </button>
+                        <button :class="tab === 'tab2' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-500'"
+                            @click="tab = 'tab2'" class="cursor-pointer px-4 py-2 focus:outline-none">
+                            Preocupaciones
+                        </button>
+                        <button :class="tab === 'tab3' ? 'border-b-2 border-blue-500 text-blue-600' : 'text-gray-500'"
+                            @click="tab = 'tab3'" class="cursor-pointer px-4 py-2 focus:outline-none">
+                            Futuro
+                        </button>
+                    </div>
+
+                    <!-- Contenu des onglets -->
+                   <div x-show="tab === 'tab1'" class="transition duration-300">
+                <ul class="text-gray-500 list-disc list-inside space-y-2">
+                    <li>Consolidarme como diseñadora y desarrolladora freelance con una identidad visual propia y reconocible.</li>
+                    <li>Ampliar mi portafolio en modelado 3D y desarrollo de videojuegos, dos áreas que me apasionan y quiero
+                        profundizar.</li>
+                    <li>Seguir trabajando con clientes internacionales.</li>
+                    <li>Integrar herramientas de inteligencia artificial en mi flujo de trabajo para ser más eficiente, sin que
+                        esto sustituya mi criterio ni mi estilo de diseño.</li>
+                    <li>Desarrollar proyectos propios de análisis de datos que combinen visualización clara con diseño
+                        atractivo.</li>
+                </ul>
+            </div>
+
+            <div x-show="tab === 'tab2'" x-cloak class="transition duration-300">
+                <ul class="text-gray-500 list-disc list-inside space-y-2">
+                    <li>Lograr integrar la inteligencia artificial en mi proceso creativo sin perder mi estilo propio en el
+                        camino — usarla como herramienta, no como reemplazo de mi criterio de diseño.</li>
+                    <li>Que la rapidez de las nuevas tecnologías no sacrifique la calidad ni el cuidado que le pongo a cada
+                        detalle de un proyecto.</li>
+                    <li>Mantener el equilibrio entre varias disciplinas (diseño web, 3D, videojuegos, datos) sin dispersarme ni
+                        perder profundidad en ninguna.</li>
+                    <li>Que mi trabajo se distinga en un mercado donde cada vez más contenido se genera de forma automatizada y
+                        genérica.</li>
+                </ul>
+            </div>
+
+            <div x-show="tab === 'tab3'" x-cloak class="transition duration-300">
+                <p class="text-gray-500">
+                    Me veo consolidada como una profesional multidisciplinaria, capaz de moverme con soltura entre el diseño
+                    web, el modelado 3D, el desarrollo de videojuegos y el análisis de datos, sin perder de vista lo que más
+                    valoro: la colorimetría, el detalle visual y una identidad de diseño propia en cada proyecto. Quiero que la
+                    inteligencia artificial forme parte natural de mi flujo de trabajo, como una herramienta que potencie mi
+                    creatividad y mi eficiencia, no que la reemplace. A mediano plazo, aspiro a colaborar con clientes de
+                    distintas partes del mundo gracias a mi dominio de varios idiomas, y a construir un portafolio que refleje
+                    tanto mi versatilidad técnica como mi sello personal. Además de certificarme en el idioma arabe y frances.
+                </p>
+            </div>
+        </div>
+    </section>
+   <footer class="p-4 pb-8">
+    <div class="w-full max-w-5xl mx-auto">
+        <div class="flex gap-4 justify-between items-center">
+            <small>Copyright © 2026</small>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/AlondraPliego" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-600 hover:text-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.2.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/Alondralmond" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-600 hover:text-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                        <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.87 5.87 0 0 0-2.13 1.39A5.87 5.87 0 0 0 .62 4.15c-.3.76-.5 1.63-.56 2.91C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13a5.87 5.87 0 0 0 2.13 1.39c.76.3 1.63.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.87 5.87 0 0 0 2.13-1.39 5.87 5.87 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.87 5.87 0 0 0-1.39-2.13A5.87 5.87 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="min-h-screen">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/componentes.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        :root {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .playfair {
+            font-family: "Playfair Display", serif;
+        }
+
+        .bg-skew:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            transform: skewY(-5deg);
+            transform-origin: top left;
+            z-index: -1;
+            background-color: #ececec;
+            min-height: 600px;
+        }
+    </style>
+</head>
+
+<body class="bg-skew min-h-screen flex flex-col justify-between">
+    <header class="p-4 pt-8">
+        <div class="w-full max-w-5xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between w-full items-start md:items-center gap-4">
+                <a class="playfair font-bold text-2xl">Ingeniera en Sistemas Computacionales</a>
+                <nav class="flex items-center gap-8 text-sm">
+                    <a href="about.html" class="hover:underline">About me</a>
+                    <a href="proyectos.html" class="hover:underline">Proyectos</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="px-4 py-24">
+        <div class="w-full max-w-5xl mx-auto">
+            <div class="flex flex-col sm:flex-row gap-8">
+                <div class="w-full hidden sm:block sm:max-w-[400px]">
+                    <img class="object-cover w-full" src="img/fotoPersonal.png" alt="">
+                </div>
+                <div class="w-full flex flex-col items-start gap-4">
+                    <small class="border-l-2 pl-2 mb-4 text-xs">Done with passion</small>
+                    <h1 class="playfair font-bold text-2xl md:text-4xl xl:text-6xl">
+                        Alondra Pliego Mendez
+                    </h1>
+                    <p class="text-md text-gray-500">
+                        Soy estudiante del Instituto Tecnológico de Oaxaca, en la carrera de Ingenieria en Sistemas Computacionales,
+                        disfruto de lo increible que resulta el poder decirle a una computadora que es lo que deseas que haga y que actualmente,
+                        existan diversas tecnologias que te lleven a lograrlo exitosamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="px-4 py-24">
+    <div class="max-w-5xl mx-auto">
+
+        <div class="flex flex-col items-center gap-10">
+
+            <small class="border-l-4 border-blue-500 pl-2 text-xs uppercase">
+                Stack Tecnológico
+            </small>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-10 place-items-center w-full">
+
+                <div class="flex items-center justify-center h-28 w-40">
+                    <img src="img/Postgres.png"
+                         alt="PostgreSQL"
+                         class="max-h-16 object-contain">
+                </div>
+
+                <div class="flex items-center justify-center h-28 w-40">
+                    <img src="img/python.png"
+                         alt="Python"
+                         class="max-h-16 object-contain">
+                </div>
+
+                <div class="flex items-center justify-center h-28 w-40">
+                    <img src="img/react.png"
+                         alt="React"
+                         class="max-h-16 object-contain">
+                </div>
+
+                <div class="flex items-center justify-center h-28 w-40">
+                    <img src="img/unity.png"
+                         alt="Unity"
+                         class="max-h-10 object-contain">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    <section class="px-4 py-24 fila-carruseles">
+    <div class="carrusel" id="carrusel1"></div>
+    <div class="carrusel" id="carrusel2"></div>
+    <script src="js/componentes.js"></script>
+    <script>
+        crearCarruselTexto('carrusel1',
+            [
+                { titulo: 'Hábilidades Técnicas', detalle: 'Adquiridas a través de certificaciones' },
+                { titulo: 'Modelos 3D', detalle: 'Blender, Unity' },
+                { titulo: 'Ciberceguridad', detalle: 'Certificación de Google en coursera' },
+                { titulo: 'JavaScript', detalle: 'ES6+, DOM, async/await' },
+                { titulo: 'HTML & CSS', detalle: 'Semántico, responsive' },
+                { titulo: 'Python', detalle: 'Automatización y scripting' },
+                { titulo: 'SQL', detalle: 'Consultas y bases de datos' },
+                { titulo: 'Git', detalle: 'Control de versiones' },
+                { titulo: 'React', detalle: 'Componentes y hooks' }
+            ],
+            'img/fondo1T.jpg'
+        );
+
+        crearCarruselTexto('carrusel2',
+            [
+                'Habilidades Blandas',
+                'Trabajo en equipo',
+                'Comunicación efectiva',
+                'Resolución de problemas',
+                'Adaptabilidad',
+                'Pensamiento crítico',
+                'Gestión del tiempo',
+                'Liderazgo',
+                'Creatividad'
+            ],
+            'img/fondo2T.jpg'
+        );
+    </script>
+</section>
+    <section class="px-4 py-24">
+        <div class="w-full max-w-5xl mx-auto">
+            <div class="flex flex-col gap-4">
+                <small class="border-l-2 pl-2 mb-4 text-xs">Sin barreras</small>
+                <h2 class="playfair font-bold text-4xl">
+                    Idiomas certificados
+                </h2>
+                <div class="mt-4 flex flex-col md:grid grid-cols-2 gap-4">
+    <div class="bg-gray-100 rounded-full flex items-center gap-4 p-4 px-12">
+        <div class="flex bg-white p-0 rounded-full w-12 h-12 items-center justify-center overflow-hidden">
+            <img src="https://flagcdn.com/w80/gb.png" alt="Bandera de Reino Unido" class="w-full h-full object-cover">
+        </div>
+        <div>
+            <h4 class="playfair font-bold">Inglés</h4>
+            <small class="text-gray-500">Cambridge C2 Proficiency (CPE) </small>
+        </div>
+    </div>
+    <div class="bg-gray-100 rounded-full flex items-center gap-4 p-4 px-12">
+        <div class="flex bg-white p-0 rounded-full w-12 h-12 items-center justify-center overflow-hidden">
+            <img src="https://flagcdn.com/w80/de.png" alt="Bandera de Alemania" class="w-full h-full object-cover">
+        </div>
+        <div>
+            <h4 class="playfair font-bold">Aleman</h4>
+            <small class="text-gray-500">Goethe-Zertifikat C2: Großes Deutsches Sprachdiplom (GDS) — del Goethe-Institut</small>
+        </div>
+    </div>
+    <div class="bg-gray-100 rounded-full flex items-center gap-4 p-4 px-12">
+        <div class="flex bg-white p-0 rounded-full w-12 h-12 items-center justify-center overflow-hidden">
+            <img src="https://flagcdn.com/w80/cn.png" alt="Bandera de China" class="w-full h-full object-cover">
+        </div>
+        <div>
+            <h4 class="playfair font-bold">Chino</h4>
+            <small class="text-gray-500">HSK 6</small>
+        </div>
+    </div>
+    <div class="bg-gray-100 rounded-full flex items-center gap-4 p-4 px-12">
+        <div class="flex bg-white p-0 rounded-full w-12 h-12 items-center justify-center overflow-hidden">
+            <img src="https://flagcdn.com/w80/pt.png" alt="Bandera de Portugal" class="w-full h-full object-cover">
+        </div>
+        <div>
+            <h4 class="playfair font-bold">Portugues</h4>
+            <small class="text-gray-500">CAPLE (Centro de Avaliação de Português Língua Estrangeira) — de la Universidad de Lisboa</small>
+        </div>
+    </div>
+</div>
+                
+    </section>
+    <section class="px-4 py-24">
+    <div class="w-full max-w-5xl mx-auto">
+        <div class="flex flex-col items-start gap-4">
+            <small class="border-l-2 pl-2 mb-4 text-xs">Freelancer</small>
+            <h2 class="playfair font-bold text-4xl">
+                Proyectos
+            </h2>
+            <p class="text-md text-gray-500">
+                Desde la creación de videojuegos, hasta el desarrollo de sistemas y servicios personalizados.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+
+                <a href="proyectos.html" class="flex flex-col gap-4 w-full">
+                    <h3 class="playfair font-bold text-xl">
+                        Portafolio Interactivo 3D
+                    </h3>
+                    <img class="object-cover w-full h-48 rounded-xl" src="img/1P.png" alt="Modelado 3D">
+                    <small>
+                        Modelado y texturizado de assets 3D en Blender para un entorno interactivo, optimizados para
+                        renderizado en tiempo real.
+                    </small>
+                </a>
+
+                <a href="proyectos.html" class="flex flex-col gap-4 w-full">
+                    <h3 class="playfair font-bold text-xl">
+                        Videojuego 2D de Plataformas
+                    </h3>
+                    <img class="object-cover w-full h-48 rounded-xl" src="img/2P.png" alt="Videojuego">
+                    <small>
+                        Desarrollo completo de un videojuego 2D con mecánicas de plataformas, sistema de niveles y
+                        físicas personalizadas.
+                    </small>
+                </a>
+
+                <a href="proyectos.html" class="flex flex-col gap-4 w-full">
+                    <h3 class="playfair font-bold text-xl">
+                        Sitio Web Corporativo
+                    </h3>
+                    <img class="object-cover w-full h-48 rounded-xl" src="img/3P.png" alt="Sitio web corporativo">
+                    <small>
+                        Diseño y desarrollo de sitio web responsive para empresa, enfocado en UX/UI moderno y
+                        rendimiento optimizado.
+                    </small>
+                </a>
+
+                <a href="proyectos.html" class="flex flex-col gap-4 w-full">
+                    <h3 class="playfair font-bold text-xl">
+                        E-commerce Personalizado
+                    </h3>
+                    <img class="object-cover w-full h-48 rounded-xl" src="img/4P.png" alt="Tienda en línea">
+                    <small>
+                        Diseño de tienda en línea con carrito de compras, pasarela de pagos y panel de administración
+                        a medida.
+                    </small>
+                </a>
+
+                <a href="proyectos.html" class="flex flex-col gap-4 w-full">
+                    <h3 class="playfair font-bold text-xl">
+                        Dashboard de Análisis de Datos
+                    </h3>
+                    <img class="object-cover w-full h-48 rounded-xl" src="img/5P.png" alt="Análisis de datos">
+                    <small>
+                        Visualización interactiva de datos con gráficos dinámicos, filtros en tiempo real y reportes
+                        exportables para toma de decisiones.
+                    </small>
+                </a>
+
+                <a href="proyectos.html" class="flex flex-col gap-4 w-full">
+                    <h3 class="playfair font-bold text-xl">
+                        True Ownership (Web3)
+                    </h3>
+                    <img class="object-cover w-full h-48 rounded-xl" src="img/6P.png" alt="Proyecto Web3">
+                    <small>
+                        Your data, your assets, your rules. Plataforma descentralizada con autoridad completa sobre
+                        identidad digital, finanzas y presencia en línea.
+                    </small>
+                </a>
+
+            </div>
+
+            <a class="bg-black p-2 mt-4 px-6 text-white rounded-full hover:bg-gray-800" href="proyectos.html">
+                Más proyectos
+            </a>
+        </div>
+    </div>
+</section>
+    <section class="px-4 py-20">
+    <div class="w-full max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 gap-6 lg:gap-12 lg:grid-cols-3">
+            <div class="text-left">
+                <div>
+                    <h2 class="playfair text-2xl font-bold">
+                        Preguntas frecuentes
+                    </h2>
+                    <small class="text-gray-500 text-md">
+                        Todo lo que necesitas saber antes de trabajar conmigo.
+                    </small>
+                </div>
+            </div>
+            <div class="relative w-full mx-auto font-normal lg:col-span-2" x-data="{
+    activeAccordion: '',
+    setActiveAccordion(id) {
+    this.activeAccordion = (this.activeAccordion == id) ? '' : id
+    }
+    }">
+                <div class="cursor-pointer group text-gray-600 hover:text-zinc-500"
+                    x-data="{ id: $id('accordion') }"
+                    :class="{ 'text-zinc-900': activeAccordion==id, 'text-gray-600 hover:text-zinc-500': activeAccordion!=id }">
+                    <button
+                        class="cursor-pointer flex items-center justify-between w-full p-4 px-0 pb-1 text-sm text-left select-none lg:text-base"
+                        @click="setActiveAccordion(id)">
+                        <span>¿Cuál es el costo de un proyecto?</span>
+                        <svg class="w-5 h-5 duration-300 ease-out text-zinc-500" fill="none" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5"
+                            :class="{ '-rotate-[45deg]': activeAccordion==id }">
+                            <path d="M12 6v12m6-6H6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div x-collapse="" x-show="activeAccordion==id"
+                        style="height: 0px; overflow: hidden; display: none;" hidden="">
+                        <div class="p-4 pt-2 text-sm text-gray-500">
+                            Los costos son personalizados según las necesidades de cada cliente. Depende del alcance,
+                            la complejidad y los tiempos de entrega del proyecto. Contáctame y con gusto te doy una
+                            cotización a la medida.
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer group text-gray-600 hover:text-zinc-500"
+                    x-data="{ id: $id('accordion') }"
+                    :class="{ 'text-zinc-900': activeAccordion==id, 'text-gray-600 hover:text-zinc-500': activeAccordion!=id }">
+                    <button
+                        class="cursor-pointer flex items-center justify-between w-full p-4 px-0 pb-1 text-sm text-left select-none lg:text-base"
+                        @click="setActiveAccordion(id)">
+                        <span>¿Cuánto tiempo tarda un proyecto?</span>
+                        <svg class="w-5 h-5 duration-300 ease-out text-zinc-500" fill="none" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5"
+                            :class="{ '-rotate-[45deg]': activeAccordion==id }">
+                            <path d="M12 6v12m6-6H6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div x-collapse="" x-show="activeAccordion==id"
+                        style="height: 0px; overflow: hidden; display: none;" hidden="">
+                        <div class="p-4 pt-2 text-sm text-gray-500">
+                            El tiempo de entrega varía según el tipo de proyecto (sitio web, videojuego, modelado 3D,
+                            análisis de datos, etc.) y su complejidad. Al platicar los detalles te doy un estimado
+                            claro antes de comenzar.
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer group text-gray-600 hover:text-zinc-500"
+                    x-data="{ id: $id('accordion') }"
+                    :class="{ 'text-zinc-900': activeAccordion==id, 'text-gray-600 hover:text-zinc-500': activeAccordion!=id }">
+                    <button
+                        class="cursor-pointer flex items-center justify-between w-full p-4 px-0 pb-1 text-sm text-left select-none lg:text-base"
+                        @click="setActiveAccordion(id)">
+                        <span>¿Qué tipo de proyectos desarrollas?</span>
+                        <svg class="w-5 h-5 duration-300 ease-out text-zinc-500" fill="none" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5"
+                            :class="{ '-rotate-[45deg]': activeAccordion==id }">
+                            <path d="M12 6v12m6-6H6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div x-collapse="" x-show="activeAccordion==id"
+                        style="height: 0px; overflow: hidden; display: none;" hidden="">
+                        <div class="p-4 pt-2 text-sm text-gray-500">
+                            Desarrollo sitios web, videojuegos, modelado 3D, sistemas personalizados y análisis de
+                            datos. Si tu proyecto no está en la lista, escríbeme de todos modos: seguro podemos
+                            encontrar una solución juntos.
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer group text-gray-600 hover:text-zinc-500"
+                    x-data="{ id: $id('accordion') }"
+                    :class="{ 'text-zinc-900': activeAccordion==id, 'text-gray-600 hover:text-zinc-500': activeAccordion!=id }">
+                    <button
+                        class="cursor-pointer flex items-center justify-between w-full p-4 px-0 pb-1 text-sm text-left select-none lg:text-base"
+                        @click="setActiveAccordion(id)">
+                        <span>¿Ofreces mantenimiento después de la entrega?</span>
+                        <svg class="w-5 h-5 duration-300 ease-out text-zinc-500" fill="none" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5"
+                            :class="{ '-rotate-[45deg]': activeAccordion==id }">
+                            <path d="M12 6v12m6-6H6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div x-collapse="" x-show="activeAccordion==id"
+                        style="height: 0px; overflow: hidden; display: none;" hidden="">
+                        <div class="p-4 pt-2 text-sm text-gray-500">
+                            Sí, ofrezco soporte y mantenimiento posterior a la entrega. El alcance y costo se acuerdan
+                            según lo que necesites (correcciones, actualizaciones, nuevas funciones, etc.).
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer group text-gray-600 hover:text-zinc-500"
+                    x-data="{ id: $id('accordion') }"
+                    :class="{ 'text-zinc-900': activeAccordion==id, 'text-gray-600 hover:text-zinc-500': activeAccordion!=id }">
+                    <button
+                        class="cursor-pointer flex items-center justify-between w-full p-4 px-0 pb-1 text-sm text-left select-none lg:text-base"
+                        @click="setActiveAccordion(id)">
+                        <span>¿Trabajas con clientes fuera de mi ciudad o país?</span>
+                        <svg class="w-5 h-5 duration-300 ease-out text-zinc-500" fill="none" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5"
+                            :class="{ '-rotate-[45deg]': activeAccordion==id }">
+                            <path d="M12 6v12m6-6H6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div x-collapse="" x-show="activeAccordion==id"
+                        style="height: 0px; overflow: hidden; display: none;" hidden="">
+                        <div class="p-4 pt-2 text-sm text-gray-500">
+                            Sí, trabajo de forma remota con clientes de cualquier ciudad o país. Toda la comunicación
+                            y entrega de avances se puede hacer a distancia sin ningún problema.
+                        </div>
+                    </div>
+                </div>
+                <div class="cursor-pointer group text-gray-600 hover:text-zinc-500"
+                    x-data="{ id: $id('accordion') }"
+                    :class="{ 'text-zinc-900': activeAccordion==id, 'text-gray-600 hover:text-zinc-500': activeAccordion!=id }">
+                    <button
+                        class="cursor-pointer flex items-center justify-between w-full p-4 px-0 pb-1 text-sm text-left select-none lg:text-base"
+                        @click="setActiveAccordion(id)">
+                        <span>¿Cómo puedo contactarte?</span>
+                        <svg class="w-5 h-5 duration-300 ease-out text-zinc-500" fill="none" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" stroke="currentColor" stroke-width="1.5"
+                            :class="{ '-rotate-[45deg]': activeAccordion==id }">
+                            <path d="M12 6v12m6-6H6" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+                    <div x-collapse="" x-show="activeAccordion==id"
+                        style="height: 0px; overflow: hidden; display: none;" hidden="">
+                        <div class="p-4 pt-2 text-sm text-gray-500">
+                            Puedes escribirme por teléfono al
+                            <a href="tel:+529518737324" class="underline hover:text-zinc-900">951 873 7324</a>
+                            o por correo a
+                            <a href="mailto:alondrapliego131104@gmail.com" class="underline hover:text-zinc-900">alondrapliego131104@gmail.com</a>.
+                            Con gusto respondo lo antes posible.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="p-4 pb-8">
+    <div class="w-full max-w-5xl mx-auto">
+        <div class="flex gap-4 justify-between items-center">
+            <small>Copyright © 2026</small>
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/AlondraPliego" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-600 hover:text-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                        <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.08.78 2.17 0 1.57-.01 2.83-.01 3.22 0 .31.2.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/Alondralmond" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-gray-600 hover:text-black transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5" fill="currentColor">
+                        <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56a5.87 5.87 0 0 0-2.13 1.39A5.87 5.87 0 0 0 .62 4.15c-.3.76-.5 1.63-.56 2.91C0 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13a5.87 5.87 0 0 0 2.13 1.39c.76.3 1.63.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56a5.87 5.87 0 0 0 2.13-1.39 5.87 5.87 0 0 0 1.39-2.13c.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91a5.87 5.87 0 0 0-1.39-2.13A5.87 5.87 0 0 0 19.86.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0Zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84Zm0 10.16A4 4 0 1 1 16 12a4 4 0 0 1-4 4Zm6.41-10.4a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
