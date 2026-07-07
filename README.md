@@ -14,8 +14,8 @@ Tecnológico Nacional de México, Instituto Tecnológico de Oaxaca
 La creación de un portafolio en donde podamos presentar evidencia tangible de habilidades, creatividad y experiencia es de suma importancia para la inserción en el mundo laboral, ya sea como freelancer o buscando formar parte de una empresa, es por ello también que es necesario conocer al menos una estructura básica del mismo.
 Para la realización de este portafolio se utiliza el framework css conocido como Tailwind dado que gracias a su flexibilidad permite la personalización a libertad del desarrollador. 
 La plantilla tomada como base es la siguiente:
-![Plantilla](img/plantilla.png.png)
-En si no es como tal una plantilla para portafolio sin embargo debido a su estructura bien definida por secciones la hizo facil de implementar, además de que sigue un estilo bastante sobrio que me permitio explorar diferentes colores en lugares específicos.
+![Plantilla](img/plantilla.png)
+Aunque no sea una plantilla para portafolio debido a su estructura bien definida por secciones la hizo facil de implementar, además de que sigue un estilo bastante sobrio que me permitio explorar diferentes colores en lugares específicos.
 ### Sitio de descarga de la plantilla
 - https://github.com/lbegey/tw-daiva-tpl
 - https://www.tailawesome.com/resources/daiva
